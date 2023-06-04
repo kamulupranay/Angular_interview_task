@@ -1,0 +1,37 @@
+<nav class="navbar navbar-light bg-light logo_navbar">
+    <div class="container">
+      <a class="navbar-brand logo_navbar_brand" href="#">
+        <img src="assets/img/logo.png" alt="logo" class="img-fluid nav_logo">
+      </a>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-sm-12 d-flex my-2">
+        <h6 style="font-size: 20px;">User Details</h6>
+        <button class="btn btn-danger btn-delete" type="button" (click)="onDelete(users)" [disabled]="!checkDisable">Delete</button>
+    </div>
+    <div class="col-sm-12" style="overflow: auto;">
+        <table class="table table-bordered" cdkDropList (cdkDropListDropped)="drop($event)" [cdkDropListData]="users">
+            <thead>
+                <tr>
+                    <th class="text-center"><input type="checkbox" class="form-check-input"></th>
+                    <th (click)="onSortClick($event)">User Name &nbsp; <i class="fa-solid fa-sort"></i></th>
+                    <th (click)="onSortClick($event)">Phone Number &nbsp; <i class="fa-solid fa-sort"></i></th>
+                    <th (click)="onSortClick($event)">Email ID &nbsp; <i class="fa-solid fa-sort"></i></th>
+                    <th class="text-end">Options <i class="fa-solid fa-circle-info text-primary"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users" draggable="true" (dragstart)="start($event)" (dragover)="dragover($event)">
+                    <td class="text-center"><input type="checkbox" class="form-check-input" (click)="onCheck($event)" [value] = "user.id"></td>
+                    <td>{{user.userName}}</td>
+                    <td>{{user.phoneNumber}}</td>
+                    <td>{{user.email}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <mat-slide-toggle>Toggle me!</mat-slide-toggle> -->
+</div>
+

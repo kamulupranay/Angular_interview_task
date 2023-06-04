@@ -1,0 +1,39 @@
+.container{
+    margin: 0;
+}
+.nav_logo{
+    width: 150px;
+}
+.btn-delete{
+    margin-left: auto;
+}
+.form-check-input{
+    border-color: #000;
+}
+body{
+    color:black;
+    font-size:25px;
+   }
+   td,tr,th{
+    border:1px solid black;
+    border-collapse: collapse;
+    cursor:all-scroll;
+   }
+   table{
+    border-collapse: collapse;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+    margin:0 auto;
+   }
+
+   @media (min-width: 320px) and (max-width: 575px){
+    .logo_navbar{
+        margin: 0 -12px;
+
+        & .logo_navbar_brand{
+            margin: auto;
+            padding: 1rem;
+        }
+    }
+   }
