@@ -102,9 +102,6 @@ svg:first-child{
 .logo {
     width: 180px;
 }
-// .input-group{
-//     flex-direction: column;
-// }
 .input-group .input-control_custom:placeholder-shown{
     font-style: italic;
 }
@@ -139,9 +136,6 @@ svg:first-child{
 .text_validation{
     color: #D94E3B;
 }
-// input.ng-invalid.ng-touched{
-//     border-color: #D94E3B;
-// }
 
 @media (min-width: 320px) and (max-width: 575px) {
     .main_row-content{
